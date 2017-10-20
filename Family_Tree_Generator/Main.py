@@ -11,8 +11,10 @@ class Person:
     def double_surname(cls, surname):
         # only women to have double surname
         gender = "f"
-        surname = surname + "-" + People.random_name("s")
-        return cls(gender, surname)
+        maiden_name = People.random_name("s")
+        surnames_list = [maiden_name, surname]
+        full_surname = "-".join(surnames_list)
+        return cls(gender, full_surname)
 
 
 class People:
@@ -56,11 +58,10 @@ class People:
             print("{} generation".format(number))
             print("-" * 30)
             for person in v:
-                print("{} {}".format(person.name.title(), person.surname))
+                print("{}{}".format(person.name.title(), person.surname))
 
     def add_person(self, gender):
         surname = self.people[1][0].surname
-        if len(self.people[generation] == 0)
         if gender == "m":
             try:
                 self.people[generation].append(Person(gender, surname))
@@ -83,6 +84,7 @@ class People:
                     continue
             except ValueError:
                 print("Please input an positive integer")
+                continue
             break
         return checked
 
@@ -90,7 +92,8 @@ class People:
 p = People()
 
 print("How many generations would you like to add? ")
-gen = People.integer_insistent_tool()
+gen = p.integer_insistent_tool()
+[print("_" * 30) for i in range(2)]
 
 for i in range(gen):
     generation += 1
@@ -101,4 +104,5 @@ for i in range(gen):
     female_n = People.integer_insistent_tool()
     [p.add_person("m") for k in range(male_n)]
     [p.add_person("f") for k in range(female_n)]
+    print("_" * 30)
 p.print_people()
