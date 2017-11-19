@@ -16,3 +16,13 @@ INSERT INTO products (name, price) VALUES
 ("butter", 12);
 
 SELECT * FROM products;
+
+CREATE TABLE productscopy LIKE products;
+ALTER TABLE productscopy RENAME products2;
+TRUNCATE products2;
+
+CREATE TABLE productscopy2 AS SELECT * FROM products;
+SELECT * FROM productscopy2;
+DELETE FROM productscopy2;
+
+DROP TABLES products, products2, productscopy2;
