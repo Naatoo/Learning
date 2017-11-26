@@ -3,7 +3,7 @@ CREATE DATABASE buildings;
 USE buildings;
 
 CREATE TABLE house(
-	number INT UNSIGNED,
+	number  INT UNSIGNED,
 	name char(30),
 	surface FLOAT);
 
