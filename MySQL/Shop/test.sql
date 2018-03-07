@@ -1,0 +1,2 @@
+SELECT *
+FROM % S ORDER BY "ID"
