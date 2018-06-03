@@ -37,6 +37,7 @@ def insort_2():
 
 bisect_fn = bisect.bisect
 print('haystack ->', ' '.join('%2d' % n for n in HAYSTACK))
+print(bisect_fn.__name__)
 needle_haystack(bisect_fn)
 
 insort()
